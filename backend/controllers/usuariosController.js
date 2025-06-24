@@ -1,24 +1,20 @@
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const Usuario = require('../models/usuario');
-const Instituicao = require('../models/instituicao');
 
+// ▶️ Registrar usuário (sem código escolar)
 exports.registrar = async (req, res) => {
-  const { nome, email, senha, codigo_escolar } = req.body;
+  const { nome, email, senha, numero, cpf } = req.body;
 
   try {
-    const instituicao = await Instituicao.findOne({ where: { codigo_acesso: codigo_escolar } });
-    if (!instituicao) {
-      return res.status(404).json({ erro: 'Código escolar inválido' });
-    }
-
     const hash = await bcrypt.hash(senha, 10);
 
     const usuario = await Usuario.create({
       nome,
       email,
       senha: hash,
-      codigo_escolar,
+      numero,
+      cpf,
     });
 
     res.status(201).json({ usuario });
@@ -27,13 +23,21 @@ exports.registrar = async (req, res) => {
   }
 };
 
+// ▶️ Login de usuário
 exports.login = async (req, res) => {
   const { email, senha } = req.body;
 
   try {
     const usuario = await Usuario.findOne({ where: { email } });
-    if (!usuario || !(await bcrypt.compare(senha, usuario.senha))) {
-      return res.status(401).json({ erro: 'Credenciais inválidas' });
+
+    if (!usuario) {
+      return res.status(401).json({ erro: 'Email não encontrado' });
+    }
+
+    const senhaValida = await bcrypt.compare(senha, usuario.senha);
+
+    if (!senhaValida) {
+      return res.status(401).json({ erro: 'Senha inválida' });
     }
 
     const token = jwt.sign({ id: usuario.id, tipo: 'usuario' }, process.env.JWT_SECRET, {
@@ -46,6 +50,7 @@ exports.login = async (req, res) => {
   }
 };
 
+// ▶️ Atualizar perfil (exemplo opcional)
 exports.atualizarPerfil = async (req, res) => {
   try {
     const { school } = req.body;

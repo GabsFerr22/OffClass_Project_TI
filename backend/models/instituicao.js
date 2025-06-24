@@ -12,7 +12,6 @@ const Instituicao = sequelize.define('Instituicao', {
   email: { type: DataTypes.STRING, unique: true },
   cnpj: { type: DataTypes.STRING, unique: true },
   senha: DataTypes.STRING,
-  codigo_acesso: { type: DataTypes.STRING, unique: true },
 });
 
 module.exports = Instituicao;
