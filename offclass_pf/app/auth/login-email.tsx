@@ -16,8 +16,8 @@ export default function LoginEmail() {
       try {
         const url =
           tipoConta === 'usuario'
-            ? 'http://192.168.1.75:3000/api/usuarios/login'
-            : 'http://192.168.1.75:3000/api/instituicoes/login';
+            ? 'https://offclassprojectti-production.up.railway.app/api/usuarios/login'
+            : 'https://offclassprojectti-production.up.railway.app/api/instituicoes/login';
 
         const body =
           tipoConta === 'usuario'

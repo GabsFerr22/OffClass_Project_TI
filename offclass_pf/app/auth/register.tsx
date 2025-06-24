@@ -34,7 +34,7 @@ export default function Register() {
   setMensagem('Cadastrando...');
 
   try {
-    const response = await fetch('http://192.168.1.75:3000/api/usuarios/registrar', {
+    const response = await fetch('https://offclassprojectti-production.up.railway.app/api/usuarios/registrar', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
