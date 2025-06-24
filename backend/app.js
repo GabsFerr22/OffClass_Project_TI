@@ -6,12 +6,15 @@ const usuarioRoutes = require('./routes/usuarioRoutes');
 const instituicaoRoutes = require('./routes/instituicaoRoutes');
 const cors = require('cors');
 
+// Middlewares
 app.use(cors());
 app.use(express.json());
 
+// Rotas
 app.use('/api/usuarios', usuarioRoutes);
 app.use('/api/instituicoes', instituicaoRoutes);
 
+// Porta dinâmica (para Railway) ou 3000 local
 const PORT = process.env.PORT || 3001;
 
 sequelize.sync().then(() => {
