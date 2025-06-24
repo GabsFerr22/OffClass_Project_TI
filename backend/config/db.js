@@ -2,12 +2,12 @@ require('dotenv').config();
 const { Sequelize } = require('sequelize');
 
 const sequelize = new Sequelize(
-  process.env.DB_NAME,         // 'railway'
-  process.env.DB_USER,         // 'root'
-  process.env.DB_PASSWORD,     // senha
+  process.env.DB_NAME,      // Nome do banco
+  process.env.DB_USER,      // Usuário
+  process.env.DB_PASSWORD,  // Senha
   {
-    host: process.env.DB_HOST, // 'crossover.proxy.rlwy.net'
-    port: process.env.DB_PORT, // '21618'
+    host: process.env.DB_HOST,
+    port: process.env.DB_PORT,
     dialect: 'mysql',
     logging: false,
   }

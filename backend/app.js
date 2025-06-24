@@ -15,11 +15,13 @@ app.use('/api/usuarios', usuarioRoutes);
 app.use('/api/instituicoes', instituicaoRoutes);
 
 // Porta dinâmica (para Railway) ou 3000 local
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3000;
 
 sequelize.sync().then(() => {
   console.log('✅ Banco de dados sincronizado');
-  app.listen(PORT, '0.0.0.0', () => console.log(`🚀 Servidor rodando na porta ${PORT}`));
+  app.listen(PORT, () => {
+  console.log(`Servidor rodando na porta ${PORT}`);
+});
 }).catch((err) => {
   console.error('❌ Erro ao sincronizar o banco de dados:', err);
 });
