@@ -98,7 +98,7 @@ Este projeto é acadêmico, mas tem grande potencial de expansão. Se você dese
 
 - 👨‍💻 Desenvolvedor: João Gabriel Ferreira Mendes  
 - 📧 Email: [bielgagg94@gmail.com]  
-- 🔗 LinkedIn: [SEU_LINKEDIN_AQUI]  
+- 🔗 LinkedIn: [www.linkedin.com/in/joao-gabriel-f-24343a270]  
 
 ---
 
