@@ -1,6 +1,7 @@
 # 📱 OffClass
 
-![Logo do OffClass](C:\Users\gabsm\Desktop\PJ OffClass PI\offclass_pf\assets\logo1.png)
+![Logo do OffClass](/offclass_pf/assets/logo1.png)
+
 
 ## 🚀 Uma nova forma de desconectar para se reconectar!
 
@@ -40,11 +41,15 @@ Este aplicativo foi desenvolvido como projeto final para a disciplina de **Tópi
 
 Adicione aqui prints do seu aplicativo:
 
-![Tela de Login](INSIRA_AQUI_O_LINK_DO_PRINT_LOGIN)
+![Tela de Splash](/offclass_pf/assets/Splash%20Art.jpeg)
 
-![Tela de Atividades](INSIRA_AQUI_O_LINK_DO_PRINT_ATIVIDADES)
+![Tela de Home](/offclass_pf/assets/Home.png)
 
-![Tela de Ranking](INSIRA_AQUI_O_LINK_DO_PRINT_RANKING)
+![Tela de Perfil](/offclass_pf/assets/Perfil.png)
+
+![Tela de Rankings](/offclass_pf/assets/Ranking.png)
+
+
 
 ---
 
