@@ -41,14 +41,10 @@ Este aplicativo foi desenvolvido como projeto final para a disciplina de **Tópi
 
 Adicione aqui prints do seu aplicativo:
 
-![Tela de Splash](/offclass_pf/assets/Splash%20Art.jpeg)
-
-![Tela de Home](/offclass_pf/assets/Home.png)
-
-![Tela de Perfil](/offclass_pf/assets/Perfil.png)
-
-![Tela de Rankings](/offclass_pf/assets/Ranking.png)
-
+<img src="./offclass_pf/assets/Splash Art.jpeg" alt="Tela Splash" width="500"/>
+<img src="./offclass_pf/assets/Home.jpeg" alt="Tela de Home" width="500"/>
+<img src="./offclass_pf/assets/Perfil.jpeg" alt="Tela de Perfil" width="500"/>
+<img src="./offclass_pf/assets/Ranking.jpeg" alt="Tela de Ranking" width="500"/>
 
 
 ---
