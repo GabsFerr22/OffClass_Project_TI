@@ -30,20 +30,38 @@ export default function Register() {
   };
 
   const handleRegister = async () => {
-    setErro(false);
-    setMensagem('Cadastrando...');
+  setErro(false);
+  setMensagem('Cadastrando...');
 
-    setTimeout(() => {
-      if (nome && email && senha) {
-        setMensagem('Cadastro realizado com sucesso!');
-        setErro(false);
-        setTimeout(() => router.replace('/auth/login-email'), 1500);
-      } else {
-        setErro(true);
-        setMensagem('Preencha todos os campos corretamente.');
-      }
-    }, 1000);
-  };
+  try {
+    const response = await fetch('http://192.168.1.75:3000/api/usuarios/registrar', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        nome,
+        email,
+        senha,
+        numero,
+        cpf 
+      })
+    });
+
+    const data = await response.json();
+
+    if (response.ok) {
+      setMensagem('Cadastro realizado com sucesso!');
+      setErro(false);
+      setTimeout(() => router.replace('/auth/login-email'), 1500);
+    } else {
+      setErro(true);
+      setMensagem(data.erro || 'Erro ao cadastrar');
+    }
+  } catch (error) {
+    setErro(true);
+    setMensagem('Erro de conexão com o servidor');
+    console.error(error);
+  }
+};
 
   return (
     <View style={styles.container}>
