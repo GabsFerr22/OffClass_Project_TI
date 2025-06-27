@@ -104,7 +104,7 @@ Este projeto é acadêmico, mas tem grande potencial de expansão. Se você dese
 
 ## 📝 Licença
 
-Este projeto está sob a licença **MIT** – veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+Este projeto está sob a licença **GPL - 2.0** – veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
 ---
 
